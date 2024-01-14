@@ -47,9 +47,6 @@ public class ScatterplotDataPoint : MonoBehaviour
     }
 
 
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +58,5 @@ public class ScatterplotDataPoint : MonoBehaviour
     {
         if(textLabel.enabled)
             transform.LookAt(Camera.main.transform); // so that the text label, if visible, always faces the camera
-
     }
 }

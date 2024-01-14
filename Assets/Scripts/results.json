@@ -1,0 +1,425 @@
+﻿[
+{
+    "numberOfClients": 3,
+    "serverRounds": 4,
+    "clientEpochs": 8,
+    "dataset": "mnist",
+    "experimentTime": 260,
+    "accuracy": 82,
+    "dataTransmitted": 85
+  },
+  {
+    "numberOfClients": 7,
+    "serverRounds": 2,
+    "clientEpochs": 6,
+    "dataset": "fashion-mnist",
+    "experimentTime": 200,
+    "accuracy": 74,
+    "dataTransmitted": 65
+  },
+  {
+    "numberOfClients": 10,
+    "serverRounds": 5,
+    "clientEpochs": 3,
+    "dataset": "mnist",
+    "experimentTime": 220,
+    "accuracy": 85,
+    "dataTransmitted": 90
+  },
+    {
+    "numberOfClients": 1,
+    "serverRounds": 8,
+    "clientEpochs": 2,
+    "dataset": "fashion-mnist",
+    "experimentTime": 140,
+    "accuracy": 62,
+    "dataTransmitted": 55
+  },
+  {
+    "numberOfClients": 9,
+    "serverRounds": 3,
+    "clientEpochs": 5,
+    "dataset": "mnist",
+    "experimentTime": 200,
+    "accuracy": 79,
+    "dataTransmitted": 80
+  },
+  {
+    "numberOfClients": 6,
+    "serverRounds": 7,
+    "clientEpochs": 1,
+    "dataset": "fashion-mnist",
+    "experimentTime": 260,
+    "accuracy": 86,
+    "dataTransmitted": 70
+  },
+    {
+    "numberOfClients": 8,
+    "serverRounds": 4,
+    "clientEpochs": 9,
+    "dataset": "mnist",
+    "experimentTime": 280,
+    "accuracy": 88,
+    "dataTransmitted": 95
+  },
+  {
+    "numberOfClients": 5,
+    "serverRounds": 1,
+    "clientEpochs": 7,
+    "dataset": "fashion-mnist",
+    "experimentTime": 160,
+    "accuracy": 68,
+    "dataTransmitted": 45
+  },
+  {
+    "numberOfClients": 4,
+    "serverRounds": 6,
+    "clientEpochs": 1,
+    "dataset": "fashion-mnist",
+    "experimentTime": 220,
+    "accuracy": 80,
+    "dataTransmitted": 60
+  },
+  {
+    "numberOfClients": 7,
+    "serverRounds": 2,
+    "clientEpochs": 6,
+    "dataset": "fashion-mnist",
+    "experimentTime": 200,
+    "accuracy": 74,
+    "dataTransmitted": 65
+  },
+  {
+    "numberOfClients": 10,
+    "serverRounds": 5,
+    "clientEpochs": 3,
+    "dataset": "mnist",
+    "experimentTime": 220,
+    "accuracy": 85,
+    "dataTransmitted": 90
+  },
+  {
+    "numberOfClients": 2,
+    "serverRounds": 5,
+    "clientEpochs": 4,
+    "dataset": "mnist",
+    "experimentTime": 180,
+    "accuracy": 78,
+    "dataTransmitted": 70
+  },
+  {
+    "numberOfClients": 9,
+    "serverRounds": 3,
+    "clientEpochs": 5,
+    "dataset": "mnist",
+    "experimentTime": 200,
+    "accuracy": 79,
+    "dataTransmitted": 80
+  },
+  {
+    "numberOfClients": 6,
+    "serverRounds": 7,
+    "clientEpochs": 1,
+    "dataset": "fashion-mnist",
+    "experimentTime": 260,
+    "accuracy": 86,
+    "dataTransmitted": 70
+  },
+  {
+    "numberOfClients": 3,
+    "serverRounds": 4,
+    "clientEpochs": 8,
+    "dataset": "mnist",
+    "experimentTime": 260,
+    "accuracy": 82,
+    "dataTransmitted": 85
+  },
+  {
+    "numberOfClients": 5,
+    "serverRounds": 1,
+    "clientEpochs": 7,
+    "dataset": "fashion-mnist",
+    "experimentTime": 160,
+    "accuracy": 68,
+    "dataTransmitted": 45
+  },
+  {
+    "numberOfClients": 4,
+    "serverRounds": 6,
+    "clientEpochs": 1,
+    "dataset": "fashion-mnist",
+    "experimentTime": 220,
+    "accuracy": 80,
+    "dataTransmitted": 60
+  },
+  {
+    "numberOfClients": 1,
+    "serverRounds": 8,
+    "clientEpochs": 2,
+    "dataset": "fashion-mnist",
+    "experimentTime": 140,
+    "accuracy": 62,
+    "dataTransmitted": 55
+  },
+  {
+    "numberOfClients": 10,
+    "serverRounds": 5,
+    "clientEpochs": 3,
+    "dataset": "mnist",
+    "experimentTime": 220,
+    "accuracy": 85,
+    "dataTransmitted": 90
+  },
+  {
+    "numberOfClients": 2,
+    "serverRounds": 5,
+    "clientEpochs": 4,
+    "dataset": "mnist",
+    "experimentTime": 180,
+    "accuracy": 78,
+    "dataTransmitted": 70
+  },
+  {
+    "numberOfClients": 8,
+    "serverRounds": 4,
+    "clientEpochs": 9,
+    "dataset": "mnist",
+    "experimentTime": 280,
+    "accuracy": 88,
+    "dataTransmitted": 95
+  },
+  {
+    "numberOfClients": 6,
+    "serverRounds": 7,
+    "clientEpochs": 1,
+    "dataset": "fashion-mnist",
+    "experimentTime": 260,
+    "accuracy": 86,
+    "dataTransmitted": 70
+  },
+  {
+    "numberOfClients": 3,
+    "serverRounds": 4,
+    "clientEpochs": 8,
+    "dataset": "mnist",
+    "experimentTime": 260,
+    "accuracy": 82,
+    "dataTransmitted": 85
+  },
+  {
+    "numberOfClients": 7,
+    "serverRounds": 2,
+    "clientEpochs": 6,
+    "dataset": "fashion-mnist",
+    "experimentTime": 200,
+    "accuracy": 74,
+    "dataTransmitted": 65
+  },
+  {
+    "numberOfClients": 4,
+    "serverRounds": 6,
+    "clientEpochs": 1,
+    "dataset": "fashion-mnist",
+    "experimentTime": 220,
+    "accuracy": 80,
+    "dataTransmitted": 60
+  },
+  {
+    "numberOfClients": 1,
+    "serverRounds": 8,
+    "clientEpochs": 2,
+    "dataset": "fashion-mnist",
+    "experimentTime": 140,
+    "accuracy": 62,
+    "dataTransmitted": 55
+  },
+  {
+    "numberOfClients": 9,
+    "serverRounds": 3,
+    "clientEpochs": 5,
+    "dataset": "mnist",
+    "experimentTime": 200,
+    "accuracy": 79,
+    "dataTransmitted": 80
+  },
+  {
+    "numberOfClients": 2,
+    "serverRounds": 5,
+    "clientEpochs": 4,
+    "dataset": "mnist",
+    "experimentTime": 180,
+    "accuracy": 78,
+    "dataTransmitted": 70
+  },
+  {
+    "numberOfClients": 8,
+    "serverRounds": 4,
+    "clientEpochs": 9,
+    "dataset": "mnist",
+    "experimentTime": 280,
+    "accuracy": 88,
+    "dataTransmitted": 95
+  },
+  {
+    "numberOfClients": 5,
+    "serverRounds": 1,
+    "clientEpochs": 7,
+    "dataset": "fashion-mnist",
+    "experimentTime": 160,
+    "accuracy": 68,
+    "dataTransmitted": 45
+  },
+  {
+    "numberOfClients": 3,
+    "serverRounds": 4,
+    "clientEpochs": 8,
+    "dataset": "mnist",
+    "experimentTime": 260,
+    "accuracy": 82,
+    "dataTransmitted": 85
+  },
+  {
+    "numberOfClients": 7,
+    "serverRounds": 2,
+    "clientEpochs": 6,
+    "dataset": "fashion-mnist",
+    "experimentTime": 200,
+    "accuracy": 74,
+    "dataTransmitted": 65
+  },
+  {
+    "numberOfClients": 10,
+    "serverRounds": 5,
+    "clientEpochs": 3,
+    "dataset": "mnist",
+    "experimentTime": 220,
+    "accuracy": 85,
+    "dataTransmitted": 90
+  },
+  {
+    "numberOfClients": 1,
+    "serverRounds": 8,
+    "clientEpochs": 2,
+    "dataset": "fashion-mnist",
+    "experimentTime": 140,
+    "accuracy": 62,
+    "dataTransmitted": 55
+  },
+  {
+    "numberOfClients": 9,
+    "serverRounds": 3,
+    "clientEpochs": 5,
+    "dataset": "mnist",
+    "experimentTime": 200,
+    "accuracy": 79,
+    "dataTransmitted": 80
+  },
+  {
+    "numberOfClients": 6,
+    "serverRounds": 7,
+    "clientEpochs": 1,
+    "dataset": "fashion-mnist",
+    "experimentTime": 260,
+    "accuracy": 86,
+    "dataTransmitted": 70
+  },
+  {
+    "numberOfClients": 7,
+    "serverRounds": 2,
+    "clientEpochs": 8,
+    "dataset": "mnist",
+    "experimentTime": 180,
+    "accuracy": 76,
+    "dataTransmitted": 75
+  },
+  {
+    "numberOfClients": 4,
+    "serverRounds": 6,
+    "clientEpochs": 1,
+    "dataset": "fashion-mnist",
+    "experimentTime": 220,
+    "accuracy": 80,
+    "dataTransmitted": 60
+  },
+  {
+    "numberOfClients": 10,
+    "serverRounds": 5,
+    "clientEpochs": 3,
+    "dataset": "mnist",
+    "experimentTime": 220,
+    "accuracy": 85,
+    "dataTransmitted": 90
+  },
+  {
+    "numberOfClients": 2,
+    "serverRounds": 5,
+    "clientEpochs": 4,
+    "dataset": "mnist",
+    "experimentTime": 180,
+    "accuracy": 78,
+    "dataTransmitted": 70
+  },
+  {
+    "numberOfClients": 8,
+    "serverRounds": 4,
+    "clientEpochs": 9,
+    "dataset": "mnist",
+    "experimentTime": 280,
+    "accuracy": 88,
+    "dataTransmitted": 95
+  },
+  {
+    "numberOfClients": 5,
+    "serverRounds": 1,
+    "clientEpochs": 7,
+    "dataset": "fashion-mnist",
+    "experimentTime": 160,
+    "accuracy": 68,
+    "dataTransmitted": 45
+  },
+  {
+    "numberOfClients": 3,
+    "serverRounds": 4,
+    "clientEpochs": 8,
+    "dataset": "mnist",
+    "experimentTime": 260,
+    "accuracy": 82,
+    "dataTransmitted": 85
+  },
+  {
+    "numberOfClients": 6,
+    "serverRounds": 3,
+    "clientEpochs": 5,
+    "dataset": "fashion-mnist",
+    "experimentTime": 180,
+    "accuracy": 71,
+    "dataTransmitted": 55
+  },
+  {
+    "numberOfClients": 9,
+    "serverRounds": 7,
+    "clientEpochs": 2,
+    "dataset": "fashion-mnist",
+    "experimentTime": 260,
+    "accuracy": 84,
+    "dataTransmitted": 75
+  },
+  {
+  "numberOfClients": 5,
+  "serverRounds": 2,
+  "clientEpochs": 3,
+  "dataset": "fashion-mnist",
+  "experimentTime": 160,  // Random component: 40% of (100 + 2 * 10 + 3 * 10 + 10 * 2) = 160
+  "accuracy": 78,        // Random component: 40% of (60 + 2 * 3 + 3 * 3 + 10 * 1) = 78
+  "dataTransmitted": 65  // Random component: 40% of (10 + 2 * 5 + 3 * 5 + 10 * 5) = 65
+  },
+  {
+  "numberOfClients": 5,
+  "serverRounds": 2,
+  "clientEpochs": 3,
+  "dataset": "fashion-mnist",
+  "experimentTime": 140,  // Random component: 40% of (100 + 2 * 10 + 3 * 10 + 10 * 2) = 140
+  "accuracy": 74,        // Random component: 40% of (60 + 2 * 3 + 3 * 3 + 10 * 1) = 74
+  "dataTransmitted": 60  // Random component: 40% of (10 + 2 * 5 + 3 * 5 + 10 * 5) = 60
+  }
+]

@@ -93,6 +93,8 @@ public class ExperimentOrchestrator : MonoBehaviour
                 float t = timeElapsed / duration;
                 foreach (GameObject obj in this.instantiatedClients)
                 {
+				    var textMesh = obj.GetComponentInChildren<TextMesh>();
+                    textMesh.text = t + "%";
                     obj.GetComponent<Renderer>().material.color = Color.Lerp(startColor, endColor, t);
                 }
                 timeElapsed += Time.deltaTime;
@@ -210,6 +212,7 @@ public class ExperimentOrchestrator : MonoBehaviour
         else
         {
             roundTextMesh.text = "";
+            this.EndExperiment();
 	    }
 
 
@@ -250,5 +253,19 @@ public class ExperimentOrchestrator : MonoBehaviour
         {
             wire.SetActive(false);
 	    }
+    }
+
+    private void EndExperiment()
+    { 
+        foreach (var client in this.instantiatedClients)
+        {
+            Destroy(client);
+	    }
+
+        Destroy(this.instantiatedServer);
+
+        this.client.gameObject.SetActive(false);
+        this.server.gameObject.SetActive(false);
+        this.objectMover.SpawnUI();
     }
 }

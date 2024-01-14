@@ -31,6 +31,20 @@ public class ObjectMover : MonoBehaviour
         uiScreen.SetActive(false);
     }
 
+    public void SpawnUI()
+    {
+        IEnumerable<Canvas> canvases = new List<Canvas> { this.datasetCanvas, this.mainButtonsCanvas, this.slidersCanvas };
+        foreach (Canvas element in canvases)
+        { 
+		    foreach (Transform child in element.transform)
+		    {
+			    child.gameObject.SetActive(true);
+		    }
+	    }
+
+        uiScreen.SetActive(true);
+    }
+
     public void SetupExperiment(int numberOfClients, int clientEpochs, string dataset, int serverRounds)
     {
         this.SpawnClients(numberOfClients);

@@ -7,6 +7,7 @@ public class ScreenText : MonoBehaviour
 {
     public TMP_Text text;
     public ExperimentOrchestrator experimentOrchestrator;
+    public ResultsOrchestrator resultsOrchestrator;
 
     private string dataset;
     private int numberOfClients;
@@ -43,6 +44,7 @@ public class ScreenText : MonoBehaviour
             {
                 TimeLeft = 0;
                 TimerOn = false;
+                this.UpdateDefinitionText();
                 this.experimentOrchestrator.RunExperiment(this.dataset, this.clientEpochs, this.serverRounds, this.numberOfClients);
 	        }
 	    }
@@ -65,6 +67,11 @@ public class ScreenText : MonoBehaviour
             this.UpdateDefinitionText();
 	    }
 
+    }
+
+    public void ShowResults()
+    {
+        this.resultsOrchestrator.SetupResults();
     }
 
     public void ModifyDataset(string dataset)
