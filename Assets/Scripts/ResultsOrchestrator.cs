@@ -95,16 +95,28 @@ public class ResultsOrchestrator : MonoBehaviour
         GameObject buttonToDefault;
         if (axis == "x")
         {
+            if (this.currentHighlightedX == button)
+            {
+		       return;
+	        }
             buttonToDefault = this.currentHighlightedX;
             this.currentHighlightedX = button;
 	    }
         else if (axis == "y")
         {
+            if (this.currentHighlightedY == button)
+            {
+		       return;
+	        }
             buttonToDefault = this.currentHighlightedY;
             this.currentHighlightedY = button;
 	    }
         else
         {
+            if (this.currentHighlightedZ == button)
+            {
+		       return;
+	        }
             buttonToDefault = this.currentHighlightedZ;
             this.currentHighlightedZ = button;
 	    }

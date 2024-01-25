@@ -47,11 +47,11 @@ public class ObjectMover : MonoBehaviour
 
     public void SetupExperiment(int numberOfClients, int clientEpochs, string dataset, int serverRounds)
     {
-        this.SpawnClients(numberOfClients);
+        this.SpawnClients(numberOfClients, dataset);
         this.SpawnServer();
     }
 
-    private void SpawnClients(int numberOfClients)
+    private void SpawnClients(int numberOfClients, string dataset)
     {
         float xPositionOffset = -0.5f;
         for (int i = 0; i < numberOfClients; i++)
@@ -59,7 +59,7 @@ public class ObjectMover : MonoBehaviour
             Vector3 position = new Vector3(
                 (i * this.distanceBetweenCubes) + xPositionOffset,
                 -0.9f,
-                0
+                -1
             );
 
             var finalPosition = transform.position + position;
@@ -76,8 +76,23 @@ public class ObjectMover : MonoBehaviour
             textObject.transform.position = client.transform.position + new Vector3(0, 0, 0);
             textObject.transform.rotation = Quaternion.Euler(90, 0, 0);
             textObject.transform.SetParent(client.transform);
-            textObject.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+            textObject.transform.localScale = new Vector3(0.08f, 0.08f, 0.08f);
             textObject.transform.localPosition = new Vector3(0, 0.5f, 0);
+
+		    GameObject datasetTextObject = new GameObject();
+		    TextMesh datasetTextMesh = datasetTextObject.AddComponent<TextMesh>();
+		    datasetTextMesh.text = dataset + " Dataset";
+			datasetTextMesh.fontSize = 18;
+			datasetTextMesh.characterSize = 1f;
+		    datasetTextMesh.color = Color.black;
+		    datasetTextMesh.anchor = TextAnchor.MiddleCenter;
+		    datasetTextMesh.alignment = TextAlignment.Center;
+		    datasetTextObject.transform.position = client.transform.position + new Vector3(0, 0, 0);
+		    datasetTextObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+		    datasetTextObject.transform.SetParent(client.transform);
+		    datasetTextObject.transform.localScale = new Vector3(0.05f, 0.1f, 0.1f);
+		    datasetTextObject.transform.localPosition = new Vector3(0, 0, -0.5f);
+		    datasetTextObject.name = "DatasetText";
         }
     }
 
@@ -93,7 +108,7 @@ public class ObjectMover : MonoBehaviour
         Vector3 position = new Vector3(
             midPointXCoordinate,
             0.26f,
-            1.32f
+            1.5f
 	    );
 
 	    GameObject server = Instantiate(this.serverContainer, position, Quaternion.identity);

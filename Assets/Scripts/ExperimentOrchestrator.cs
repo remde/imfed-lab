@@ -82,19 +82,13 @@ public class ExperimentOrchestrator : MonoBehaviour
             float duration = 5f;
             float timeElapsed = 0f;
 
-		    foreach (var client in this.instantiatedClients)
-		    {
-			    var textMesh = client.GetComponentInChildren<TextMesh>();
-			    textMesh.text = "Training\nepoch " + (i + 1) + "...";
-		    }
-
             while (timeElapsed < duration)
             {
                 float t = timeElapsed / duration;
                 foreach (GameObject obj in this.instantiatedClients)
                 {
 				    var textMesh = obj.GetComponentInChildren<TextMesh>();
-                    textMesh.text = t + "%";
+				    textMesh.text = "Training\nepoch " + (i + 1) + ": " + Math.Floor(t*100) + "%";
                     obj.GetComponent<Renderer>().material.color = Color.Lerp(startColor, endColor, t);
                 }
                 timeElapsed += Time.deltaTime;
