@@ -6,9 +6,14 @@ using System.ComponentModel;
 using UnityEngine.UI;
 using System.Linq;
 using System;
+using TMPro;
 
 public class ResultsOrchestrator : MonoBehaviour
 {
+    public TextMeshProUGUI xAxisLabel;
+    public TextMeshProUGUI yAxisLabel;
+    public TextMeshProUGUI zAxisLabel;
+
     public ObjectMover objectMover;
     public GameObject pointPrefab;
     public GameObject controlCanvas;
@@ -30,10 +35,12 @@ public class ResultsOrchestrator : MonoBehaviour
     private bool shouldRenderMnist = true;
     private bool shouldRenderFashionMnist = true;
 
+
     // Start is called before the first frame update
     void Start()
     {
         this.controlCanvas.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -45,6 +52,7 @@ public class ResultsOrchestrator : MonoBehaviour
     public void SetupResults()
     {
         this.controlCanvas.SetActive(true);
+        gameObject.SetActive(true);
         this.objectMover.DestroyObjects();
         string json = File.ReadAllText("./Assets/Scripts/results.json");
 
@@ -149,6 +157,10 @@ public class ResultsOrchestrator : MonoBehaviour
         this.currentXCoordinate = string.IsNullOrEmpty(xCoordinate) ? this.currentXCoordinate : xCoordinate;
         this.currentYCoordinate = string.IsNullOrEmpty(yCoordinate) ? this.currentYCoordinate : yCoordinate;
         this.currentZCoordinate = string.IsNullOrEmpty(zCoordinate) ? this.currentZCoordinate : zCoordinate;
+
+        this.xAxisLabel.text = this.currentXCoordinate;
+        this.yAxisLabel.text = this.currentYCoordinate;
+        this.zAxisLabel.text = this.currentZCoordinate;
 
         this.scatterPlotPoints = new List<ScatterplotDataPoint>();
 
