@@ -13,6 +13,7 @@ public class ExperimentOrchestrator : MonoBehaviour
     public Gradient downloadGradient;
 
     private List<GameObject> instantiatedClients;
+    private List<float> clientVelocities;
     private GameObject instantiatedServer;
     private List<GameObject> instantiatedWires = new();
 
@@ -67,7 +68,29 @@ public class ExperimentOrchestrator : MonoBehaviour
         this.serverRounds = serverRounds;
         this.instantiatedClients = GameObject.FindObjectsOfType<GameObject>().Where(obj => obj.name == "Client(Clone)").ToList();
         this.instantiatedServer = GameObject.FindObjectsOfType<GameObject>().Where(obj => obj.name == "Server(Clone)").First();
+        this.InstantiateClientVelocities();
         this.shouldBeginClientEpochs = true;
+    }
+
+    private void InstantiateClientVelocities()
+    {
+        var velocities = new List<float>();
+        int listLength = this.instantiatedClients.Count;
+
+        var random = new System.Random();
+        for (int i = 0; i < listLength; i++)
+	    {
+            var randomFloat = (float)(random.NextDouble() * 1.5 + 1);
+            velocities.Add(randomFloat);
+	    }
+
+        if (!velocities.Contains(1))
+        {
+            int randomIndex = random.Next(listLength);
+            velocities[randomIndex] = 1;
+        }
+
+        this.clientVelocities = velocities;
     }
 
     private IEnumerator StartClientEpochs()
@@ -79,17 +102,19 @@ public class ExperimentOrchestrator : MonoBehaviour
 
         for (int i = 0; i < this.clientEpochs; i++)
         {
-            float duration = 5f;
+            float duration = 8f;
             float timeElapsed = 0f;
 
             while (timeElapsed < duration)
             {
                 float t = timeElapsed / duration;
-                foreach (GameObject obj in this.instantiatedClients)
+                for (int j=0; j<this.instantiatedClients.Count; j++)
                 {
+                    GameObject obj = this.instantiatedClients[j];
+                    float velocity = this.clientVelocities[j];
 				    var textMesh = obj.GetComponentInChildren<TextMesh>();
-				    textMesh.text = "Training\nepoch " + (i + 1) + ": " + Math.Floor(t*100) + "%";
-                    obj.GetComponent<Renderer>().material.color = Color.Lerp(startColor, endColor, t);
+				    textMesh.text = "Training\nepoch " + (i + 1) + ": " + Math.Floor(t*velocity*100 < 100 ? t*velocity*100 : 100) + "%";
+                    obj.GetComponent<Renderer>().material.color = Color.Lerp(startColor, endColor, t*velocity);
                 }
                 timeElapsed += Time.deltaTime;
                 yield return null;
@@ -229,11 +254,11 @@ public class ExperimentOrchestrator : MonoBehaviour
 		    foreach (var client in this.instantiatedClients)
 			{
 				GameObject cylinder = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-			    cylinder.transform.localScale = new Vector3(0.01f, 1f, 0.01f);
+			    cylinder.transform.localScale = new Vector3(0.01f, 0.60f, 0.01f);
 
 			    Vector3 clientPosition = client.transform.position;
 			    Vector3 direction = serverPosition - clientPosition;
-			    Vector3 position = clientPosition + direction.normalized * 0.5f - direction.normalized * 0.25f;
+			    Vector3 position = clientPosition + direction.normalized * 0.5f - direction.normalized * 0f;
 			    cylinder.transform.position = position;
 			    cylinder.transform.rotation = Quaternion.LookRotation(direction, Vector3.up) * Quaternion.Euler(0f, 90f, 0f) * Quaternion.Euler(0f, 0f, 90f);
 			    this.instantiatedWires.Add(cylinder);

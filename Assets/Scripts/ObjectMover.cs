@@ -53,7 +53,7 @@ public class ObjectMover : MonoBehaviour
 
     private void SpawnClients(int numberOfClients, string dataset)
     {
-        float xPositionOffset = -0.5f;
+        float xPositionOffset = 0f;
         for (int i = 0; i < numberOfClients; i++)
         {
             Vector3 position = new Vector3(
@@ -108,7 +108,7 @@ public class ObjectMover : MonoBehaviour
         Vector3 position = new Vector3(
             midPointXCoordinate,
             0.26f,
-            1.5f
+            1.7f
 	    );
 
 	    GameObject server = Instantiate(this.serverContainer, position, Quaternion.identity);
