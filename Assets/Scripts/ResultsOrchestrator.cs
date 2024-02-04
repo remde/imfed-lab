@@ -192,7 +192,13 @@ public class ResultsOrchestrator : MonoBehaviour
 
             newDataPoint.dataClass = point.Dataset;
 
-            newDataPoint.textLabel.text = point.Dataset;
+            newDataPoint.textLabel.text = "Dataset: " + point.Dataset + "\n\n"
+                + "Accuracy: " + point.Accuracy.ToString("0.00") + "\n\n"
+                + "Experiment Time: " + point.ExperimentTime.ToString("0.00") + "\n\n"
+                + "Number of Clients: " + point.NumberOfClients.ToString("0.00") + "\n\n"
+                + "Server Rounds: " + point.ServerRounds.ToString("0.00") + "\n\n"
+                + "Client Epochs: " + point.ClientEpochs.ToString("0.00") + "\n\n"
+                + "Data Transmitted: " + point.DataTransmitted.ToString("0.00") + "\n\n";
 
             Color color = point.Dataset == "mnist" ? Color.red : Color.black;
             color.a = 1f;
