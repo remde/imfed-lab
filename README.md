@@ -1,4 +1,4 @@
-![Screenshot 2024-02-08 at 17 32 29](https://github.com/remde/imfed-lab/assets/12024169/7b5644cc-6ac1-4db3-bc15-3ed54fe6c4ad)# Immersive Virtual Reality Laboratory for Federated Learning Experiments
+# Immersive Virtual Reality Laboratory for Federated Learning Experiments
 
 ![Screenshot 2024-02-08 at 17 31 26](https://github.com/remde/imfed-lab/assets/12024169/051e55fb-9c52-4c3c-9e89-af8804baa983)
 
