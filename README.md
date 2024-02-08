@@ -1,56 +1,21 @@
-# Introdução ao desenvolvimento de visualizações imersivas utilizando Unity
+![Screenshot 2024-02-08 at 17 32 29](https://github.com/remde/imfed-lab/assets/12024169/7b5644cc-6ac1-4db3-bc15-3ed54fe6c4ad)# Immersive Virtual Reality Laboratory for Federated Learning Experiments
 
-Este é um projeto Unity base para a disciplina de **Projeto em Computação Gráfica: Visualização de Dados Imersiva** do Instituto de Informática da UFRGS.
+![Screenshot 2024-02-08 at 17 31 26](https://github.com/remde/imfed-lab/assets/12024169/051e55fb-9c52-4c3c-9e89-af8804baa983)
 
-Professores: Luciana Nedel, Carla Freitas, Jorge Wagner
+This is a proof of concept for a immersive 3D lab for federated learning experiments. It has been tested with an Oculus Rift device, but should be multiplatform.
 
+The experience is divided in three parts:
+1. **Experiment definition**. The user can define an experiment choosing the dataset, client epochs, server rounds, and number of clients.
+![Screenshot 2024-02-08 at 17 38 03](https://github.com/remde/imfed-lab/assets/12024169/4f0913dc-6c25-4b92-82ce-7c21064c20ee)
+2. **Experiment execution.** The experiment defined in (1) is run (simulated), and all the abstract concepts (client, server, connections, rounds, epochs, uploads, downloads, etc.) are shown as concrete models.
+![Screenshot 2024-02-08 at 17 32 29](https://github.com/remde/imfed-lab/assets/12024169/018e7d16-a2ae-4d08-b45d-fd4858b18ba1)
+3. **Results visualization.** The results for the experiments run is shown. Here, user can tweak the axis to show specific information, as well as playing around with the scatterplot: zooming, pressing each data point for more info, turning it around, etc., all with their own hands while using a VR headset.
+![Screenshot 2024-02-08 at 17 31 26](https://github.com/remde/imfed-lab/assets/12024169/a0d53f02-022a-47a1-b036-2f3ecdf4328b)
 
+The most interesting scripts that enable all of this are `ResultsOrchestrator` and `ExperimentOrchestrator` found in the [scripts folder](https://github.com/remde/imfed-lab/tree/main/Assets/Scripts).
 
-## Objetivos
+# Credits
 
-O objetivo deste material é auxiliar no desenvolvimento do projeto da disciplina de três formas:
+The work was done on top of [IntroToImmersiveAnalytics](https://github.com/jorge-wagner/IntroToImmersiveAnalytics) repository, a pre-configured project with a working MRTK scene. All credit to [Jorge Wagner](https://github.com/jorge-wagner).
 
-1. Já fornecendo um projeto pré-configurado para VR
-2. Já incluindo as seguintes dependências mais relevantes:
-    * [Oculus Integration Package](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) v. 47.0
-    * [Mixed Reality Toolkit (MRTK)](https://github.com/microsoft/MixedRealityToolkit-Unity) v. 2.8.2
-    * [Immersive Analytics Toolkit (IATK)](https://github.com/MaximeCordeil/IATK) v 1.1
-    * [Bing Maps SDK for Unity](https://github.com/microsoft/MapsSDK-Unity) v 0.11.2
-      * **Atenção:** Quem desejar utilizar os recursos do Bing Maps deverá [obter uma *API key*](https://www.bingmapsportal.com) e incluí-la em um arquivo `Assets/Resources/MapSessionConfig.txt`
-
-    * **Atenção:** O *copyright* das ferramentas acima pertencem aos seus autores. O propósito deste repositório é estritamente acadêmico.
-
-
-
-3. Disponibilizando exemplos básicos de como criar visualizações interativas, a partir das seguintes cenas:
-    * Interações básicas utilizando o MRTK
-    * Interações básicas utilizando o Oculus Interaction SDK
-    * Scatterplot interativo gerado utilizando GameObjects
-       * Versão MRTK
-       * Versão Oculus Interaction SDK
-    * Mapa interativo utilizando o Bing Maps SDK (interação com MRTK)
-    * Scatterplot interativo gerado utilizando o IATK (interação com MRTK)
-
-    Ao longo do tempo novos exemplos serão incluídos: 
-
-    * Cubo espaço-temporal mostrando como georeferenciar dados
-    * Calibração da posição da mesa utilizando *Spatial Anchors*
-
-
-  * **Atenção:** Notem que os exemplos que incluímos aqui são bastante simplificados, não incluindo seleções, filtros, visualizações coordenadas ou interações mais complexas. A intenção dos exemplos é fornecer um caminho inicial, e não servir como exemplo de um ambiente completo de visualização imersiva. 
-  * **Atenção:** Os exemplos reproduzem o objeto *RoomEnvironment* como cenário de fundo. Este ambiente é de autoria do Oculus Integration Package. 
-
-    
-
-## Onde encontrar os exemplos
-
-Os seguintes exemplos estão contidos neste projeto e podem ser explorados para o estudo das funcionalidades disponíveis:
-
-1. Exemplos simplificados preparados por nós: `Assets/Scenes`
-2. [Exemplos do Oculus Interaction SDK](https://developers.facebook.com/blog/post/2022/11/22/building-intuitive-interactions-vr/): `Assets/Oculus/Interaction/Samples/Scenes/Examples`
-3. [Exemplos do Bing Maps SDK](https://github.com/microsoft/MapsSDK-Unity/wiki/Sample-project#example-scenes-for-mixed-reality-devices): `Assets/MapsSDK/Microsoft.Maps.Unity.Examples`
-4. Exemplos do IATK: `Assets/IATK/Scenes`
-5. [Exemplos do MRTK](https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/features/example-scenes/example-hub?view=mrtkunity-2022-05): `Mixed Reality > Toolkit > Utilities > Import Examples from Package (UPM)`
-
-
-   
+There are other scenes as well (IATK, Bing Maps, etc.) in the base repository which I have not removed from my code (yet!), so there might be unnecessary files in my repository.
