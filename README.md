@@ -2,7 +2,7 @@
 
 This is a proof of concept for a immersive 3D lab for federated learning experiments. It has been tested with an Oculus Rift device, but should be multiplatform.
 
-The most interesting scripts that enable all of this are `ResultsOrchestrator` and `ExperimentOrchestrator` found in the [scripts folder](https://github.com/remde/imfed-lab/tree/main/Assets/Scripts).
+The most interesting scripts that enable all of this are `ResultsOrchestrator` and `ExperimentOrchestrator` found in the [scripts folder](https://github.com/remde/imfed-lab/tree/main/Assets/Scripts). There are also others such as `ObjectMover`, `ScreenText`, and so on. I apologize for formatting, it looks as it should using Visual Studio for Mac.
 
 # Experience
 
