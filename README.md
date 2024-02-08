@@ -1,6 +1,6 @@
 # Immersive Virtual Reality Laboratory for Federated Learning Experiments
 
-![Screenshot 2024-02-08 at 17 31 26](https://github.com/remde/imfed-lab/assets/12024169/051e55fb-9c52-4c3c-9e89-af8804baa983 | width=150)
+<img src="https://github.com/remde/imfed-lab/assets/12024169/051e55fb-9c52-4c3c-9e89-af8804baa983" width="100" height="100">
 
 This is a proof of concept for a immersive 3D lab for federated learning experiments. It has been tested with an Oculus Rift device, but should be multiplatform.
 
