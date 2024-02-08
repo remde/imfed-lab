@@ -99,7 +99,8 @@ public class ScreenText : MonoBehaviour
     }
 
     private void UpdateDefinitionText()
-    { 
+    {
+        this.isStandardTextShowing = true;
         text.text = "Dataset: " + dataset + "\n\nNumber of clients: " + numberOfClients + "\n\nClient Epochs: " + this.clientEpochs + "\n\nServer Rounds: " + this.serverRounds;
     }
 
